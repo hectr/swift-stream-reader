@@ -23,14 +23,19 @@
 
 import Foundation
 
-/// File descriptor abstraction.
-public protocol FileHandling {
-    /// Synchronously reads data up to the specified number of bytes.
-    func readData(ofLength length: Int) -> Data
-    
-    /// Moves the file pointer to the specified offset within the file represented by the receiver.
-    func seek(toFileOffset offset: UInt64)
-    
-    /// Disallows further access to the represented file or communications channel
-    func closeFile()
+extension InputStreamHandle: StreamDelegate {
+    open func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
+        assert(aStream === inputStream)
+        switch eventCode {
+        case Stream.Event.hasBytesAvailable:
+            while inputStream!.hasBytesAvailable {
+                readBytes()
+            }
+        case Stream.Event.endEncountered:
+            closeStream()
+        case Stream.Event.errorOccurred:
+            onErrorOccurred()
+        default: break
+        }
+    }
 }

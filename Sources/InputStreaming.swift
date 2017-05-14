@@ -23,14 +23,20 @@
 
 import Foundation
 
-/// File descriptor abstraction.
-public protocol FileHandling {
-    /// Synchronously reads data up to the specified number of bytes.
-    func readData(ofLength length: Int) -> Data
+/// Read-only stream abstraction.
+public protocol InputStreaming: class {
+    /// Returns YES if the stream has bytes available or if it impossible to tell without actually doing the read.
+    var hasBytesAvailable: Bool { get }
     
-    /// Moves the file pointer to the specified offset within the file represented by the receiver.
-    func seek(toFileOffset offset: UInt64)
+    /// Returns an NSError object representing the stream error.
+    var streamError: Error? { get }
     
-    /// Disallows further access to the represented file or communications channel
-    func closeFile()
+    /// Opens the receiving stream.
+    func open()
+    
+    /// Closes the receiver.
+    func close()
+    
+    /// Reads up to length bytes into the supplied buffer, which must be at least of size len. Returns the actual number of bytes read.
+    func read(_ buffer: UnsafeMutablePointer<UInt8>, maxLength len: Int) -> Int
 }

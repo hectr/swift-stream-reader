@@ -23,14 +23,40 @@
 
 import Foundation
 
-/// File descriptor abstraction.
-public protocol FileHandling {
-    /// Synchronously reads data up to the specified number of bytes.
-    func readData(ofLength length: Int) -> Data
+extension InputStreamHandle: FileHandling {
+    private func readMissingBytes(to newOffset: Int) {
+        guard let inputStream = inputStream else { return }
+        while bytesRead < newOffset && inputStream.hasBytesAvailable {
+            readBytes()
+        }
+    }
     
-    /// Moves the file pointer to the specified offset within the file represented by the receiver.
-    func seek(toFileOffset offset: UInt64)
+    private func readableBytes(for newOffset: Int) -> Int {
+        let unreadBytes = newOffset - fileOffset
+        if bytesRead > newOffset {
+            return unreadBytes
+        } else {
+            let unreadableBytes = newOffset - bytesRead
+            return unreadBytes - unreadableBytes
+        }
+    }
     
-    /// Disallows further access to the represented file or communications channel
-    func closeFile()
+    open func readData(ofLength length: Int) -> Data {
+        let newOffset = fileOffset + length
+        readMissingBytes(to: newOffset)
+        let readableLength = readableBytes(for: newOffset)
+        let range = NSRange(location: Int(fileOffset), length: readableLength)
+        var buffer = [UInt8](repeating: 0, count: readableLength)
+        data.getBytes(&buffer, range: range)
+        fileOffset = fileOffset + readableLength
+        return Data(bytes: buffer)
+    }
+    
+    open func seek(toFileOffset offset: UInt64) {
+        fileOffset = Int(offset)
+    }
+    
+    open func closeFile() {
+        closeStream()
+    }
 }

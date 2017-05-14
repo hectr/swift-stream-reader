@@ -23,14 +23,15 @@
 
 import Foundation
 
-/// File descriptor abstraction.
-public protocol FileHandling {
-    /// Synchronously reads data up to the specified number of bytes.
-    func readData(ofLength length: Int) -> Data
-    
-    /// Moves the file pointer to the specified offset within the file represented by the receiver.
-    func seek(toFileOffset offset: UInt64)
-    
-    /// Disallows further access to the represented file or communications channel
-    func closeFile()
+extension StreamReader {
+    public convenience init?(inputStream: InputStreaming, delimiter: String = "\n", encoding: String.Encoding = .utf8, chunkSize: Int = 4096) {
+        guard let delimiterData = delimiter.data(using: encoding) else { return nil }
+        let handle = InputStreamHandle(inputStream: inputStream, bufferLength: chunkSize)
+        self.init(
+            fileHandle: handle,
+            delimiterData: delimiterData,
+            encoding: encoding,
+            chunkSize: chunkSize
+        )
+    }
 }

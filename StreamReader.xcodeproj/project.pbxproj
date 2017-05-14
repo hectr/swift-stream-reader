@@ -15,6 +15,30 @@
 		8933C78E1EB5B82C000D00A4 /* StreamReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* StreamReaderTests.swift */; };
 		8933C78F1EB5B82C000D00A4 /* StreamReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* StreamReaderTests.swift */; };
 		8933C7901EB5B82D000D00A4 /* StreamReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* StreamReaderTests.swift */; };
+		C42E19E21EC848CA00C93A05 /* InputStreamHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E19E11EC848CA00C93A05 /* InputStreamHandle.swift */; };
+		C42E19E31EC848CA00C93A05 /* InputStreamHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E19E11EC848CA00C93A05 /* InputStreamHandle.swift */; };
+		C42E19E41EC848CA00C93A05 /* InputStreamHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E19E11EC848CA00C93A05 /* InputStreamHandle.swift */; };
+		C42E19E51EC848CA00C93A05 /* InputStreamHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E19E11EC848CA00C93A05 /* InputStreamHandle.swift */; };
+		C46C9D881ECA1A73008DF16F /* InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D871ECA1A73008DF16F /* InputStreaming.swift */; };
+		C46C9D891ECA1A73008DF16F /* InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D871ECA1A73008DF16F /* InputStreaming.swift */; };
+		C46C9D8A1ECA1A73008DF16F /* InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D871ECA1A73008DF16F /* InputStreaming.swift */; };
+		C46C9D8B1ECA1A73008DF16F /* InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D871ECA1A73008DF16F /* InputStreaming.swift */; };
+		C46C9D8D1ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D8C1ECA24EF008DF16F /* InputStream+InputStreaming.swift */; };
+		C46C9D8E1ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D8C1ECA24EF008DF16F /* InputStream+InputStreaming.swift */; };
+		C46C9D8F1ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D8C1ECA24EF008DF16F /* InputStream+InputStreaming.swift */; };
+		C46C9D901ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D8C1ECA24EF008DF16F /* InputStream+InputStreaming.swift */; };
+		C46C9D921ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D911ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift */; };
+		C46C9D931ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D911ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift */; };
+		C46C9D941ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D911ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift */; };
+		C46C9D951ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D911ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift */; };
+		C46C9D971ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D961ECA284B008DF16F /* StreamReader-InputStream.swift */; };
+		C46C9D981ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D961ECA284B008DF16F /* StreamReader-InputStream.swift */; };
+		C46C9D991ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D961ECA284B008DF16F /* StreamReader-InputStream.swift */; };
+		C46C9D9A1ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C9D961ECA284B008DF16F /* StreamReader-InputStream.swift */; };
+		C48D56501EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D564F1EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift */; };
+		C48D56511EC8FEA800A35B5E /* InputStreamHandle+FileHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D564F1EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift */; };
+		C48D56521EC8FEA900A35B5E /* InputStreamHandle+FileHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D564F1EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift */; };
+		C48D56531EC8FEA900A35B5E /* InputStreamHandle+FileHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D564F1EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift */; };
 		C4B7246D1EC73FA400789B96 /* StreamReader+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B7246C1EC73FA400789B96 /* StreamReader+Sequence.swift */; };
 		C4B7246E1EC73FA600789B96 /* StreamReader+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B7246C1EC73FA400789B96 /* StreamReader+Sequence.swift */; };
 		C4B7246F1EC73FA700789B96 /* StreamReader+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B7246C1EC73FA400789B96 /* StreamReader+Sequence.swift */; };
@@ -68,6 +92,12 @@
 		8933C7891EB5B82A000D00A4 /* StreamReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReaderTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* StreamReader.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StreamReader.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* StreamReaderTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StreamReaderTests.plist; sourceTree = "<group>"; };
+		C42E19E11EC848CA00C93A05 /* InputStreamHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStreamHandle.swift; sourceTree = "<group>"; };
+		C46C9D871ECA1A73008DF16F /* InputStreaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStreaming.swift; sourceTree = "<group>"; };
+		C46C9D8C1ECA24EF008DF16F /* InputStream+InputStreaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStream+InputStreaming.swift"; sourceTree = "<group>"; };
+		C46C9D911ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStreamHandle+StreamDelegate.swift"; sourceTree = "<group>"; };
+		C46C9D961ECA284B008DF16F /* StreamReader-InputStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StreamReader-InputStream.swift"; sourceTree = "<group>"; };
+		C48D564F1EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStreamHandle+FileHandling.swift"; sourceTree = "<group>"; };
 		C4B7246C1EC73FA400789B96 /* StreamReader+Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StreamReader+Sequence.swift"; sourceTree = "<group>"; };
 		C4B724711EC749AD00789B96 /* FileHandle+FileHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileHandle+FileHandling.swift"; sourceTree = "<group>"; };
 		C4B724761EC749CF00789B96 /* FileHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandling.swift; sourceTree = "<group>"; };
@@ -168,10 +198,16 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C4B724711EC749AD00789B96 /* FileHandle+FileHandling.swift */,
+				C4B724761EC749CF00789B96 /* FileHandling.swift */,
+				C46C9D8C1ECA24EF008DF16F /* InputStream+InputStreaming.swift */,
+				C42E19E11EC848CA00C93A05 /* InputStreamHandle.swift */,
+				C48D564F1EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift */,
+				C46C9D911ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift */,
+				C46C9D871ECA1A73008DF16F /* InputStreaming.swift */,
+				C46C9D961ECA284B008DF16F /* StreamReader-InputStream.swift */,
 				8933C7841EB5B820000D00A4 /* StreamReader.swift */,
 				C4B7246C1EC73FA400789B96 /* StreamReader+Sequence.swift */,
-				C4B724761EC749CF00789B96 /* FileHandling.swift */,
-				C4B724711EC749AD00789B96 /* FileHandle+FileHandling.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -482,10 +518,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46C9D8D1ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */,
+				C42E19E21EC848CA00C93A05 /* InputStreamHandle.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* StreamReader.swift in Sources */,
+				C46C9D881ECA1A73008DF16F /* InputStreaming.swift in Sources */,
 				C4B724721EC749AD00789B96 /* FileHandle+FileHandling.swift in Sources */,
+				C48D56501EC8FE6400A35B5E /* InputStreamHandle+FileHandling.swift in Sources */,
 				C4B724771EC749CF00789B96 /* FileHandling.swift in Sources */,
+				C46C9D921ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */,
 				C4B7246D1EC73FA400789B96 /* StreamReader+Sequence.swift in Sources */,
+				C46C9D971ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,10 +544,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46C9D8F1ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */,
+				C42E19E41EC848CA00C93A05 /* InputStreamHandle.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* StreamReader.swift in Sources */,
+				C46C9D8A1ECA1A73008DF16F /* InputStreaming.swift in Sources */,
 				C4B724741EC749AD00789B96 /* FileHandle+FileHandling.swift in Sources */,
+				C48D56521EC8FEA900A35B5E /* InputStreamHandle+FileHandling.swift in Sources */,
 				C4B724791EC749CF00789B96 /* FileHandling.swift in Sources */,
+				C46C9D941ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */,
 				C4B7246F1EC73FA700789B96 /* StreamReader+Sequence.swift in Sources */,
+				C46C9D991ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,10 +561,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46C9D901ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */,
+				C42E19E51EC848CA00C93A05 /* InputStreamHandle.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* StreamReader.swift in Sources */,
+				C46C9D8B1ECA1A73008DF16F /* InputStreaming.swift in Sources */,
 				C4B724751EC749AD00789B96 /* FileHandle+FileHandling.swift in Sources */,
+				C48D56511EC8FEA800A35B5E /* InputStreamHandle+FileHandling.swift in Sources */,
 				C4B7247A1EC749CF00789B96 /* FileHandling.swift in Sources */,
+				C46C9D951ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */,
 				C4B724701EC73FA800789B96 /* StreamReader+Sequence.swift in Sources */,
+				C46C9D9A1ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,10 +578,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46C9D8E1ECA24EF008DF16F /* InputStream+InputStreaming.swift in Sources */,
+				C42E19E31EC848CA00C93A05 /* InputStreamHandle.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* StreamReader.swift in Sources */,
+				C46C9D891ECA1A73008DF16F /* InputStreaming.swift in Sources */,
 				C4B724731EC749AD00789B96 /* FileHandle+FileHandling.swift in Sources */,
+				C48D56531EC8FEA900A35B5E /* InputStreamHandle+FileHandling.swift in Sources */,
 				C4B724781EC749CF00789B96 /* FileHandling.swift in Sources */,
+				C46C9D931ECA2669008DF16F /* InputStreamHandle+StreamDelegate.swift in Sources */,
 				C4B7246E1EC73FA600789B96 /* StreamReader+Sequence.swift in Sources */,
+				C46C9D981ECA284B008DF16F /* StreamReader-InputStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

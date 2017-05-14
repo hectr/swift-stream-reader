@@ -28,7 +28,7 @@ open class StreamReader  {
     let encoding: String.Encoding
     let chunkSize: Int
     let delimiterData: Data
-    private(set) var fileHandle: FileHandling!
+    private(set) var fileHandle: FileHandling?
     private(set) var buffer: Data
     private(set) var atEof: Bool
     
@@ -37,10 +37,8 @@ open class StreamReader  {
     }
     
     public convenience init?(path: String, delimiter: String = "\n", encoding: String.Encoding = .utf8, chunkSize: Int = 4096) {
-        guard let fileHandle = FileHandle(forReadingAtPath: path),
-            let delimiterData = delimiter.data(using: encoding) else {
-                return nil
-        }
+        guard let fileHandle = FileHandle(forReadingAtPath: path) else { return nil }
+        guard let delimiterData = delimiter.data(using: encoding) else { return nil }
         self.init(
             fileHandle: fileHandle,
             delimiterData: delimiterData,
@@ -54,19 +52,19 @@ open class StreamReader  {
         self.chunkSize = chunkSize
         self.fileHandle = fileHandle
         self.delimiterData = delimiterData
-        buffer = Data(capacity: chunkSize)
-        atEof = false
+        self.buffer = Data(capacity: chunkSize)
+        self.atEof = false
     }
     
     deinit {
         close()
     }
     
-    /// Return next line, or nil on EOF.
+    /// Returns next line, or nil on EOF.
     open func nextLine() -> String? {
         precondition(fileHandle != nil, "Attempt to read from closed file")
         
-        // Read data chunks from file until a line delimiter is found:
+        // Reads data chunks from file until a line delimiter is found:
         while !atEof {
             if let range = buffer.range(of: delimiterData) {
                 // Convert complete line (excluding the delimiter) to a string:
@@ -75,7 +73,7 @@ open class StreamReader  {
                 buffer.removeSubrange(0..<range.upperBound)
                 return line
             }
-            let tmpData = fileHandle.readData(ofLength: chunkSize)
+            let tmpData = fileHandle!.readData(ofLength: chunkSize)
             if tmpData.count > 0 {
                 buffer.append(tmpData)
             } else {
@@ -92,14 +90,14 @@ open class StreamReader  {
         return nil
     }
     
-    /// Start reading from the beginning of file.
+    /// Starts reading from the beginning of file.
     open func rewind() -> Void {
-        fileHandle.seek(toFileOffset: 0)
+        fileHandle!.seek(toFileOffset: 0)
         buffer.count = 0
         atEof = false
     }
     
-    /// Close the underlying file. No reading must be done after calling this method.
+    /// Closes the underlying file. No reading must be done after calling this method.
     open func close() -> Void {
         fileHandle?.closeFile()
         fileHandle = nil
