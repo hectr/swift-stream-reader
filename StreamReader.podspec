@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "StreamReader"
-  s.version      = "0.2.1"
+  s.version      = "0.3.0"
   s.summary      = "Line-by-line file reader"
   s.description  = <<-DESC
      Small library that reads lines from a file.
