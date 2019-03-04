@@ -45,7 +45,7 @@ open class InputStreamHandle: NSObject {
         if let inputStream = inputStream as? InputStream {
             assert(inputStream.delegate == nil, "input stream delegate is already set")
             inputStream.delegate = self
-            inputStream.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
+            inputStream.schedule(in: RunLoop.current, forMode: RunLoop.Mode.default)
         }
         inputStream.open()
     }
@@ -77,7 +77,7 @@ open class InputStreamHandle: NSObject {
         guard let inputStream = inputStream else { return }
         if let inputStream = inputStream as? InputStream {
             inputStream.delegate = nil
-            inputStream.remove(from: RunLoop.current, forMode: .defaultRunLoopMode)
+            inputStream.remove(from: RunLoop.current, forMode: RunLoop.Mode.default)
         }
         inputStream.close()
         self.inputStream = nil
